@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Istudent } from './interfaces/istudent';
+import { StudentsService } from './services/students.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  title = 'studentName';
+  student:Istudent;
+
+  constructor(private studentsService:StudentsService){
+    this.student = studentsService.students
+  }
 }
