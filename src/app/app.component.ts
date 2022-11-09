@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'studentName';
   student:Istudent;
 
-  constructor(private studentsService:StudentsService){
+  constructor(studentsService:StudentsService){
     this.student = studentsService.students
   }
 }
